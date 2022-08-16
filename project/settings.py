@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles',  #  "staticfiles" makes sure my static folder inside the recipes folder is read
     # Inform the name of the created app (located in the "apps.py" file)
     'recipes',
 ]
@@ -119,7 +119,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'static/'  # In-app reference to static files
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'base_static',  # Global folder reference for static files
+]
+
+STATIC_ROOT = BASE_DIR / 'static'   # Will merge the static files of my project inside a folder called static. The "BASE_DIR" is used to indicate the base folder of the directory, in this case the project
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
