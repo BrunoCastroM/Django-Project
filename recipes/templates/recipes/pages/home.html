@@ -1,20 +1,11 @@
-{% include 'recipes/partials/head.html' %}  
+{% extends 'global/base.html' %}
 
-{% comment %} To run a command in djnago you use "{% command %}" {% endcomment %}
-{% comment %} The "include" is used to include something inside the file, in this case the "head.html" {% endcomment %}
+{% block title %}Home |{% endblock title %} Home
 
-<body>
-    {% include 'recipes/partials/header.html' %}
-    {% include 'recipes/partials/search.html' %}
-    
-    <main class="main-content-container">
-        <div class="main-content main-content-list container">
-            {% include 'recipes/partials/recipe.html' %}
-            {% include 'recipes/partials/recipe.html' %}
-            {% include 'recipes/partials/recipe.html' %}
-        </div>
-    </main>
-    {% include 'recipes/partials/footer.html' %}
-</body>
-
-</html>
+{% block content %}
+<div class="main-content main-content-list container">
+    {% for recipe in recipes %}
+        {% include 'recipes/partials/recipe.html' %}
+    {% endfor %}
+</div>
+{% endblock content %}
