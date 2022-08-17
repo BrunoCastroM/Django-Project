@@ -17,9 +17,9 @@ def make_recipe():
         'title': fake.sentence(nb_words=6),
         'description': fake.sentence(nb_words=12),
         'preparation_time': fake.random_number(digits=2, fix_len=True),
-        'preparation_time_unit': 'Minutos',
+        'preparation_time_unit': 'Minutes',
         'servings': fake.random_number(digits=2, fix_len=True),
-        'servings_unit': 'Porção',
+        'servings_unit': 'Portion',
         'preparation_steps': fake.text(3000),
         'created_at': fake.date_time(),
         'author': {
