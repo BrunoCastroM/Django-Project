@@ -127,6 +127,9 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = BASE_DIR / 'static'   # Will merge the static files of my project inside a folder called static. The "BASE_DIR" is used to indicate the base folder of the directory, in this case the project
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
