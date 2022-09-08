@@ -4,7 +4,7 @@ from recipes.models import Recipe
 
 
 def home(request):
-    recipes = Recipe.objects.filter(is_published=True).order_by('-id')
+    recipes = recipes = Recipe.objects.filter(is_published=True,).order_by('-id')
     # Put the specific path to avoid conflict. Ex: "recipes/home.html"
     return render(request, 'recipes/pages/home.html', context={'recipes': recipes, })
     # The django search automatically the name path of "templates", because it's configurate in "settings.py" file, but you can configure it
