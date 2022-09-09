@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-nccc$rd*zdrunwzuvrwo0%1v6%)sm#_y6tg8piyq**^0u5=umx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []  # type: ignore
 
 
 # Application definition
@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',  #  "staticfiles" makes sure my static folder inside the recipes folder is read
+    'django.contrib.staticfiles',  # The "staticfiles" makes sure my static folder inside the recipes folder is read
     # Inform the name of the created app (located in the "apps.py" file)
     'recipes',
 ]
@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Fortaleza'
 
 USE_I18N = True
 
