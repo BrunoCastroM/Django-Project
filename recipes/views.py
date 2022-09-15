@@ -1,5 +1,4 @@
-from django.shortcuts import render, get_list_or_404, get_object_or_404, render
-from utils.recipes.factory import make_recipe
+from django.shortcuts import render, get_list_or_404, get_object_or_404
 from recipes.models import Recipe
 
 
