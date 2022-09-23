@@ -1,7 +1,3 @@
-from pydoc import describe
-from statistics import mode
-from unicodedata import category
-
 from django.contrib.auth.models import User
 from django.db import models
 
