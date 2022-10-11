@@ -22,7 +22,8 @@ class RecipeTestBase(TestCase):
             email=email,
         )
 
-    def make_recipe(self, category_data=None,
+    def make_recipe(self,
+                    category_data=None,
                     author_data=None,
                     title='Recipe Title',
                     description='Recipe Description',
