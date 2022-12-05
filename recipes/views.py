@@ -2,12 +2,18 @@ from django.http import Http404
 from django.shortcuts import render, get_list_or_404, get_object_or_404
 from django.db.models import Q
 from recipes.models import Recipe
+from django.core.paginator import Paginator
 
 
 def home(request):
     recipes = recipes = Recipe.objects.filter(is_published=True,).order_by('-id')
     # Put the specific path to avoid conflict. Ex: "recipes/home.html"
-    return render(request, 'recipes/pages/home.html', context={'recipes': recipes, })
+
+    current_page = request.GET.get('page', 1)
+    paginator = Paginator(recipes, 3)
+    page_obj = paginator.get_page(current_page)
+
+    return render(request, 'recipes/pages/home.html', context={'recipes': page_obj, })
     # The django search automatically the name path of "templates", because it's configurate in "settings.py" file, but you can configure it
 
 
