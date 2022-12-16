@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',  # The "staticfiles" makes sure my static folder inside the recipes folder is read
     # Inform the name of the created app (located in the "apps.py" file)
     'recipes',
+    'authors',
 ]
 
 MIDDLEWARE = [
